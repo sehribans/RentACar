@@ -1,0 +1,189 @@
+﻿@model List<RentView>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+    List<TBL_MARKA> marka = ViewBag.datas;
+
+}
+
+<div id="bodyHtml">
+    <section class="carlist-banner">
+        <div class="carlist-header-conteiner">
+            <div class="text-div">
+                <h1 class="text-white">Car Listings</h1>
+                <p class="text-white">Home/Listings/ <span class="color">Car Listings</span></p>
+            </div>
+        </div>
+    </section>
+    <section class="inputs-div">
+        <div class="d-flex align-items-center justify-content-between">
+            <p class="color-g">
+                Showing 1-8 of 10 Results
+            </p>
+            <div class="dropdown-div d-flex">
+                <div class="form-group color-g">
+                    <label>Show:</label>
+                    <select class="dropdown-head bg-light" placeholder="5" id="show">
+                        <option selected>5</option>
+                        <option class="option" value="20">20</option>
+                        <option value="10">10</option>
+                        <option value="15">15</option>
+
+                    </select>
+                </div>
+                <div class="form-group ">
+                    <select class="dropdown-head bg-light color-g" id="LowToHight">
+                        <option value="20">Low To Hight</option>
+                        <option value="10">Hight To Low</option>
+
+                    </select>
+                </div>
+                <div class="form-group color-g">
+                    <select class="dropdown-head bg-light color-g" id="popular">
+                        <option selected>Popular</option>
+                        @foreach (var item in Model)
+                        {
+                            <option>@item.ARAC_AD</option>
+                        }
+
+
+
+                    </select>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <section class="bg-light filter-carlist">
+        <div class="content-conteiner d-flex justify-content-between">
+            <div class="card d-flex filter-conteiner">
+                <h6>What Are You Looking For</h6>
+                <div class="input-group mb-5">
+
+                    <input type="text" class="form-control">
+                </div>
+
+                <div class="carlist-filter-header">
+
+                    <div class="carlist-header d-flex align-items-center">
+                        <div class="d-flex justify-content-between align-items-center w-100"><h6>Car Category</h6><i class="fa-solid fa-angle-down"></i></div>
+                    </div>
+
+                    <div class="checkbox-div d-flex flex-column">
+                        @foreach (var item in marka)
+                        {
+                            <div class="form-check">
+                                <input class="form-check-input filterCheck" type="checkbox" value="@item.MARKA" id="@item.MARKA">
+                                <label class="form-check-label" for="@item.MARKA">
+                                    @item.MARKA
+                                </label>
+                            </div>
+                        }
+                    </div>
+                </div>
+                <div class="carlist-filter-header d-flex align-items-center">
+                    <h6>Car Type</h6> <i class="fa-solid fa-angle-right"></i>
+                </div>
+                <div class="carlist-filter-header d-flex align-items-center">
+                    <h6>Capacity</h6> <i class="fa-solid fa-angle-right"></i>
+                </div>
+                <div class="carlist-filter-header d-flex align-items-center">
+                    <h6>Price</h6> <i class="fa-solid fa-angle-right"></i>
+                </div>
+                <div class="carlist-filter-header d-flex align-items-center">
+                    <h6>Rating</h6> <i class="fa-solid fa-angle-right"></i>
+                </div>
+                <div class="carlist-filter-header d-flex align-items-center">
+                    <h6>Custummer Recomendation</h6> <i class="fa-solid fa-angle-right"></i>
+                </div>
+                <button class="button button-red filter-button" onclick="gonder()">
+                    <i class="fa-light fa-filter"></i><span>
+                        Filter
+                        Results
+                    </span>
+                </button>
+            </div>
+            <div class="car-conteiner filer-cars d-flex">
+                @foreach (var item in Model)
+                {
+                    <div class="car-card card p-3 car-list-card" id="@item.MARKA">
+                        <div class="car-img w-100">
+                            <div class="car-top d-flex w-100 justify-content-between">
+                                <span class="color-g">@item.MARKA</span>
+                                <i class="fa-thin fa-circle-heart"></i>
+                            </div>
+                            <img class="car" src="@item.GORSEL">
+                        </div>
+                        <div class="car-content">
+                            <div class="border-bottom">
+                                <div class="avatar-div"><img src="/img/avatar-0.jpg"></div>
+                                <h3>@item.ARAC_AD</h3>
+                                <div class="stars d-flex justify-content-between">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <span class="color-g">(5.0)</span>
+                                </div>
+                            </div>
+                            <div class="listing-details-group m-2">
+                                <ul class="d-flex w-100 justify-content-between p-0">
+                                    <li class="d-flex color-g"><img src="/img/car-parts-01.svg">@item.VİTES</li>
+                                    <li class="d-flex color-g"><img src="/img/car-parts-02.svg">@item.KM</li>
+                                    <li class="d-flex color-g"><img src="/img/car-parts-03.svg">@item.YAKIT</li>
+                                </ul>
+                                <ul class="d-flex w-100 justify-content-between p-0">
+                                    <li class="d-flex color-g"><img src="/img/car-parts-04.svg">Power</li>
+                                    <li class="d-flex color-g"><img src="/img/car-parts-05.svg">@item.YIL</li>
+                                    <li class="d-flex color-g"><img src="/img/car-parts-06.svg">@item.KOLTUK Persons</li>
+                                </ul>
+                            </div>
+                            <div class="location-details w-100 d-flex justify-content-between mt-3 align-items-center p-2">
+                                <div class="location color-g">
+                                    <i class="fa-light fa-location-dot"></i>@item.SEHIR_AD
+                                </div>
+                                <div class="price d-flex align-items-center">
+                                    <h6>$@item.KİRA</h6><span class="color-g">/Day</span>
+                                </div>
+                            </div>
+                            <button class="btn border-0 w-100 btn-dark text-white mt-3" >
+                                <i class="fa-light fa-calendar"></i> Rent Now
+                            </button>
+                        </div>
+                    </div>
+                }
+
+            </div>
+        </div>
+
+    </section>
+</div>
+
+<script>
+    function gonder() {
+        var dizi = new Array();
+       
+
+        var filterList = $('.filterCheck:checked');
+        $.each(filterList, function (k, v) {
+
+            dizi.push($(v).val())
+        });
+
+        $.ajax({
+            url : '/CarList/Index',
+            method : 'POST',
+            data: { 'Filtreler':dizi},
+            success(r){
+                console.log(r);
+                $('html').html(r);
+            }
+        })
+    }
+
+</script>
+
+

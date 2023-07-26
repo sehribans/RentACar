@@ -1,0 +1,66 @@
+﻿@model List<TBL_MARKA>
+@{
+    ViewData["Title"] = "MarkaListe";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="row">
+    <div class="col-6">
+        <div class="card">
+            <div class="card-header d-flex justify-content-between align-items-center">
+                <h3 class="card-title">Marka Listesi</h3>
+                <a href="/Admin/MarkaForm" class="btn btn-primary">Marka Ekle</a>
+                
+            </div>
+            <!-- /.card-header -->
+            <div class="card-body table-responsive p-0">
+                <table class="table table-hover text-nowrap">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Marka</th>
+                            <th>İkon</th>
+                            <th>İşlemler</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>@item.ID</td>
+                                <td>@item.MARKA</td>
+                                <td>@item.ICON</td>
+                                <td><a class="btn text-danger" onclick="Sil(@item.ID)" ><i class="fa-duotone fa-trash"></i></a>
+                                    <a href="/Admin/MarkaForm/@item.ID" class="btn text-primary"><i class="fa-duotone fa-pen-to-square"></i></a>
+                                    </td>
+                            </tr>
+                        }
+                       
+                    </tbody>
+                </table>
+            </div>
+            <!-- /.card-body -->
+        </div>
+        <!-- /.card -->
+    </div>
+</div>
+
+<script>
+    function Sil(id) {
+        Swal.fire({
+            title: 'Emin misiniz?',
+            text: "Bu işlem geri alınamaz!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#00ff00',
+            cancelButtonColor: '#ff0000',
+            confirmButtonText: 'Evet,Sil!',
+            cancelButtonText: 'İptal',
+        }).then((result) => {
+            if (result.isConfirmed) {
+                url = "/Admin/MarkaSil/?id=" + id;
+                window.location.href = url;
+            }
+        })
+        }
+</script>

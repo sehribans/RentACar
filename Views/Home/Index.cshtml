@@ -1,0 +1,559 @@
+﻿@model List<RentView>
+@{
+    ViewData["Title"] = "Home Page";
+
+    List<TBL_MARKA> marka = ViewBag.datas;
+}
+
+
+        <section class="banner-section">
+            <div class="banner-conteiner d-flex">
+
+                <div class="banner-text-conteiner">
+                    <div class="text-border-radius">
+                        <i class="fa-solid fa-thumbs-up color"></i> <span>100% Trusted car rental platform in the
+                            World</span>
+                    </div>
+                    <div class="banner-header">
+                        <h1>Find Your Best</h1>
+                        <h1 class="color">Dream Car for Rental</h1>
+                    </div>
+                    <div class="banner-text">
+                        <span class="color-g">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                            Lorem Ipsum has
+                            been the industry's standard dummy text ever since the 1500s</span>
+                    </div>
+                    <div class="banner-button-conteiner">
+                <button class="button button-banner"> <a href="/CarList/Index">View All Cars <i class="fa-solid fa-arrow-right"></i></a></button>
+                    </div>
+                </div>
+                <div class="banner-img">
+                    <img src="/img/car-right.jpg">
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="filter-conteiner">
+                <div class="filter-content">
+                    <form class="d-flex">
+                        <ul class="d-flex align-items-center">
+                            <li class="form-column">
+                                <div class="form-group">
+                                    <label>Pickup Location</label>
+                                    <div class="group-input">
+                                        <span class="input-group-text"><i class="fa-light fa-location-dot"></i></span>
+                                        <input type="text" class="form-control filter-input"
+                                            placeholder="Enter City, Airport, or Address">
+
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="form-column">
+                                <div class="form-group">
+                                    <label>Pickup Date</label>
+                                    <div class="group-input d-flex">
+                                        <div class="form-group date-widget">
+                                            <div class="group-input">
+                                                <span class="input-group-text"><i class="feather-calendar"></i></span>
+                                                <input type="text" class="form-control datetimepicker"
+                                                    placeholder="04/11/2023">
+                                            </div>
+                                        </div>
+                                        <div class="form-group time-widget">
+                                            <div class="group-input">
+                                                <input type="text" class="form-control timepicker"
+                                                    placeholder="11:00 PM">
+                                                <span><i class="feather-clock"></i></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="form-column">
+                                <div class="form-group">
+                                    <label>Return Date
+                                    </label>
+                                    <div class="form-group-wrapp d-flex">
+                                        <div class="form-group date-widget">
+                                            <div class="group-input">
+                                                <input type="text" class="form-control datetimepicker"
+                                                    placeholder="04/11/2023">
+                                                <span><i class="feather-calendar"></i></span>
+                                            </div>
+                                        </div>
+                                        <div class="form-group time-widget">
+                                            <div class="group-input">
+                                                <input type="text" class="form-control timepicker"
+                                                    placeholder="11:00 PM">
+                                                <span><i class="feather-clock"></i></span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </li>
+                            <li class="column-group-last">
+                                <div class="form-group">
+                                    <div class="search-btn">
+                                        <button class="button-red button .filter-button search-button" type="submit"> <i
+                                                class="fa fa-search" aria-hidden="true"></i>Search</button>
+                                    </div>
+                                </div>
+                            </li>
+
+                        </ul>
+
+                    </form>
+
+                </div>
+            </div>
+        </section>
+        <section class="services-section">
+    <div class="services-right"> <img src="/img/service-right.svg"></div>
+            <div class="bg-gray">
+                <div class="content-conteiner">
+                    <div class="services-text">
+                        <h2>How It Works</h2>
+                        <div></div>
+                        <p class="color-g">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                        </p>
+                    </div>
+                    <div class="services-icons-cards">
+                        <div class="sevices-card">
+                            <div class="img-services border-blue"> <img class="w-100 bg-blue" src="/img/services-icon-01.svg">
+                            </div>
+                            <div class="services-content">
+                                <h3>1. Choose Locations</h3>
+                                <p class="color-g mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting
+                                    industry. Lorem Ipsum has been the industry's standard dummy text ever since the
+                                    1500s,</p>
+                            </div>
+
+                        </div>
+                        <div class="sevices-card">
+                            <div class="img-services border-red"> <img class="bg-red w-100" src="/img/services-icon-01.svg">
+                            </div>
+                            <div class="services-content">
+                                <h3>2. Pick-Up Locations</h3>
+                                <p class="color-g mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting
+                                    industry. Lorem Ipsum has been the industry's standard dummy text ever since the
+                                    1500s,</p>
+                            </div>
+
+                        </div>
+                        <div class="sevices-card">
+                            <div class="img-services border-dark"> <img class="bg-dark w-100" src="/img/services-icon-01.svg">
+                            </div>
+                            <div class="services-content">
+                                <h3>3. Book your Car</h3>
+                                <p class="color-g mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting
+                                    industry. Lorem Ipsum has been the industry's standard dummy text ever since the
+                                    1500s,</p>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <section class="popular-cars">
+            <div class="content-conteiner">
+                <div class="services-text">
+                    <h2>Explore Most Popular Cars</h2>
+                    <div></div>
+                    <p class="color-g">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
+                </div>
+                <div class="car-filter-cards d-flex w-75">
+                    @foreach (var item in marka)
+                    {
+                <a class="card color-g" href="#@item.MARKA">
+                        <span><img src="@item.ICON"></span>@item.MARKA
+                    </a>
+                    }
+
+                </div>
+                <div class="car-conteiner d-flex">
+                    @foreach (var item in Model)
+                    {
+                <div class="car-card card p-3" id="@item.MARKA" >
+                    <div class="car-img w-100">
+                        <div class="car-top d-flex w-100 justify-content-between">
+                            <span class="color-g">@item.MARKA</span>
+                            <i class="fa-thin fa-circle-heart"></i>
+                        </div>
+                        <img class="car" src="@item.GORSEL">
+                    </div>
+                    <div class="car-content">
+                        <div class="border-bottom">
+                            <div class="avatar-div"><img src="/img/avatar-0.jpg"></div>
+                            <h3>@item.ARAC_AD</h3>
+                            <div class="stars d-flex justify-content-between">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <span class="color-g">(5.0)</span>
+                            </div>
+                        </div>
+                        <div class="listing-details-group m-2">
+                            <ul class="d-flex w-100 justify-content-between p-0">
+                                <li class="d-flex color-g"><img src="/img/car-parts-01.svg">@item.VİTES</li>
+                                <li class="d-flex color-g"><img src="/img/car-parts-02.svg">@item.KM</li>
+                                <li class="d-flex color-g"><img src="/img/car-parts-03.svg">@item.YAKIT</li>
+                            </ul>
+                            <ul class="d-flex w-100 justify-content-between p-0">
+                                <li class="d-flex color-g"><img src="/img/car-parts-04.svg">Power</li>
+                                <li class="d-flex color-g"><img src="/img/car-parts-05.svg">@item.YIL</li>
+                                <li class="d-flex color-g"><img src="/img/car-parts-06.svg">@item.KOLTUK Persons</li>
+                            </ul>
+                        </div>
+                        <div class="location-details w-100 d-flex justify-content-between mt-3 align-items-center p-2">
+                            <div class="location color-g">
+                                <i class="fa-light fa-location-dot"></i>@item.SEHIR_AD
+                            </div>
+                            <div class="price d-flex align-items-center">
+                                <h6>$@item.KİRA</h6><span class="color-g">/Day</span>
+                            </div>
+                        </div>
+                        <button class="btn border-0 w-100 btn-dark text-white mt-3">
+                            <i class="fa-light fa-calendar"></i> Rent Now
+                        </button>
+                    </div>
+                </div>
+            }
+                </div>
+            </div>
+        </section>
+        <section class="popular-cartypes">
+            <div class="content-conteiner">
+                <div class="services-text">
+                    <h2>Explore Most Popular Cars</h2>
+                    <div></div>
+                    <p class="color-g">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
+                </div>
+        <div class="m-auto w-25 d-flex">
+            <button class="popular-button button button-banner">
+                <a href="/CarList/Index">
+                    View All Cars <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </button>
+        </div>
+
+            </div>
+
+        </section>
+        <section class="facts-numbers">
+    <img src="/img/facts-left.png">
+
+            <div class="content-conteiner">
+                <div class="services-text">
+                    <h2 class="text-white">Facts By The Numbers</h2>
+                    <div></div>
+                    <p class="text-white">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                    </p>
+                </div>
+                <div class="numbers-cards d-flex">
+                    <div class="card numbers-card d-flex">
+                        <div class="icon-box">
+                            <i class="fa-regular fa-heart"></i>
+                        </div>
+                        <div class="text-box d-flex">
+                            <h1>16K+</h1>
+                            <span class="color-g">Happy Customers</span>
+                        </div>
+                    </div>
+                    <div class="card numbers-card d-flex">
+                        <div class="icon-box">
+                            <i class="fa-thin fa-car"></i>
+                        </div>
+                        <div class="text-box d-flex">
+                            <h1>1400+</h1>
+                            <span class="color-g">Count of Cars</span>
+                        </div>
+                    </div>
+                    <div class="card numbers-card d-flex">
+                        <div class="icon-box">
+                            <i class="fa-solid fa-headphones"></i>
+                        </div>
+                        <div class="text-box d-flex">
+                            <h1>343K+</h1>
+                            <span class="color-g">Car Center Solutions</span>
+                        </div>
+                    </div>
+                    <div class="card numbers-card d-flex">
+                        <div class="icon-box">
+                            <i class="fa-solid fa-clock-rotate-left"></i>
+                        </div>
+                        <div class="text-box d-flex">
+                            <h1>110K+</h1>
+                            <span class="color-g">Total Kilometer</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <section class="recommended-car">
+            <div class="content-conteiner">
+                <div class="services-text">
+                    <h2>Recommended Car Rental deals</h2>
+                    <div></div>
+                    <p class="color-g">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
+                </div>
+                <div class="m-auto w-25 d-flex"> <button  class="popular-button button button-banner"><a href="CarList/Index"> Go to all Cars <i class="fa-solid fa-arrow-right"></i></a> </button></div>
+
+            </div>
+
+        </section>
+        <section class="why-choose-us">
+            <div class="bg-gray">
+                <div class="content-conteiner">
+                    <div class="services-text">
+                        <h2>Why Choose Us</h2>
+                        <div></div>
+                        <p class="color-g">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                        </p>
+                    </div>
+                    <div class="card-coteiner d-flex">
+                        <div class="card chooseus-card w-100 ">
+                            <div class="icon-box w-100 bg-black">
+                                <i class="fa-light fa-user-check"></i>
+                            </div>
+                            <div class="card-text">
+                                <h4>Easy & Fast Booking</h4>
+                                <span class="color-g">Completely carinate e business testing process whereas fully
+                                    researched customer service. Globally extensive content with quality.</span>
+                            </div>
+
+
+                        </div>
+                        <div class="card chooseus-card w-100">
+                            <div class="icon-box w-100 bg-blue">
+                                <i class="fa-light fa-user-check"></i>
+                            </div>
+                            <div class="card-text">
+                                <h4>Customer Satisfaction</h4>
+                                <span class="color-g">Completely carinate e business testing process whereas fully
+                                    researched customer service. Globally extensive content with quality.</span>
+                            </div>
+
+
+                        </div>
+                        <div class="card chooseus-card w-100">
+                            <div class="icon-box w-100 bg-red">
+                                <i class="fa-light fa-user-check"></i>
+                            </div>
+                            <div class="card-text">
+                                <h4>Many Pickup Location</h4>
+                                <span class="color-g">Completely carinate e business testing process whereas fully
+                                    researched customer service. Globally extensive content with quality.</span>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <section class="about-us">
+            <div class="content-conteiner">
+                <div class="services-text">
+                    <h2 class="text-white">Facts By The Numbers</h2>
+                    <div></div>
+                    <p class="text-white">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                    </p>
+                </div>
+                <div class="card-conteiner d-flex">
+                    <div class="card custom-card w-100">
+                <img src="/img/quote.png">
+                        <div class="card-content">
+                            <div class="custom-detail d-flex">
+                                <div class="div-img">
+                            <img src="/img/avatar-04.jpg">
+                                </div>
+                                <div class="custom-name">
+                                    <h6>Rabien Ustoc</h6>
+                                    <div class="stars d-flex justify-content-between">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <span class="color-g">(5.0)</span>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="card-text">
+                                <span class="color-g">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                    consequat.</span>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="card custom-card w-100">
+                        <img src="/img/quote.png">
+                        <div class="card-content">
+                            <div class="custom-detail d-flex">
+                                <div class="div-img">
+                            <img src="/img/avatar-06.jpg">
+                                </div>
+                                <div class="custom-name">
+                                    <h6>Şehriban Sertdal</h6>
+                                    <div class="stars d-flex justify-content-between">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <span class="color-g">(5.0)</span>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="card-text">
+                                <span class="color-g">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                    consequat.</span>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="acordions">
+            <div class="content-conteiner">
+                <div class="services-text">
+                    <h2>Facts By The Numbers</h2>
+                    <div></div>
+                    <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
+                </div>
+
+
+            </div>
+        </section>
+        <section class="pricing">
+            <div class="content-conteiner">
+                <div class="services-text">
+                    <h2>Facts By The Numbers</h2>
+                    <div></div>
+                    <p>Choose a package that suits you</p>
+                </div>
+                <div class="pricing-cards d-flex">
+                    <div class="card pricing-card bg-blue p-card">
+                        <div class="price-head">
+                            <h2 class="text-white">Save more with Good Plans</h2>
+                            <p class="text-white">Choose a plan and get onboard in Minutes, then get $100 with next
+                                payment</p>
+                        </div>
+                        <div class="price-img">
+                    <img src="/img/price-plan.png">
+                        </div>
+                    </div>
+                    <div class="card pricing-card p-card-1">
+                        <div class="icon-box bg-light">
+                            <h6>Essential</h6>
+                            <span class="color-g">For the basics</span>
+                        </div>
+                        <div class="price-box">
+                            <h4>$49</h4>
+                            <span class="color-g">Per user per month</span>
+                        </div>
+                        <ul class="price-details">
+                            <li class="color-g"><i class="fa-regular fa-circle-check"></i>Get Starting message</li>
+                            <li class="color-g"><i class="fa-regular fa-circle-check"></i>Min 1 month, extend anytime
+                            </li>
+                            <li class="color-g"><i class="fa-regular fa-circle-check"></i>Rental car prices include tax
+                            </li>
+                            <li class="color-g line"><i class="fa-regular fa-circle-xmark"></i>Extend or return anytime
+                            </li>
+                            <li class="color-g line"><i class="fa-regular fa-circle-xmark"></i>Doorstep delivery in
+                                2days</li>
+                            <li class="color-g line"><i class="fa-regular fa-circle-xmark"></i>Car system included free
+                                of charge.</li>
+                            <li class="color-g line"><i class="fa-regular fa-circle-xmark"></i>Min 1 month, extend
+                                anytime</li>
+                        </ul>
+                        <button class="btn w-100 price-button">Request A Demo</button>
+                    </div>
+                    <div class="card pricing-card p-card-2">
+                        <div class="icon-box bg-red">
+                            <h6 class="text-white">Recommended</h6>
+                            <span class="text-white">For the Users</span>
+                        </div>
+                        <div class="price-box">
+                            <h4>$95</h4>
+                            <span class="color-g">Per user per month</span>
+                        </div>
+                        <ul class="price-details">
+                            <li class="color-g"><i class="fa-regular fa-circle-check"></i>Get Starting message</li>
+                            <li class="color-g"><i class="fa-regular fa-circle-check"></i>Min 1 month, extend anytime
+                            </li>
+                            <li class="color-g"><i class="fa-regular fa-circle-check"></i>Rental car prices include tax
+                            </li>
+                            <li class="color-g"><i class="fa-regular fa-circle-check"></i>Extend or return anytime</li>
+                            <li class="color-g line"><i class="fa-regular fa-circle-xmark"></i>Doorstep delivery in
+                                2days</li>
+                            <li class="color-g line"><i class="fa-regular fa-circle-xmark"></i>Car system included free
+                                of charge.</li>
+                            <li class="color-g line"><i class="fa-regular fa-circle-xmark"></i>Min 1 month, extend
+                                anytime</li>
+                        </ul>
+                        <button class="btn w-100 price-button">Request A Demo</button>
+                    </div>
+                    <div class="card pricing-card p-card-1">
+                        <div class="icon-box bg-light">
+                            <h6>Pro</h6>
+                            <span class="color-g">For the Pro</span>
+                        </div>
+                        <div class="price-box ">
+                            <h4>$154</h4>
+                            <span class="color-g">Per user per month</span>
+                        </div>
+                        <ul class="price-details">
+                            <li class="color-g"><i class="fa-regular fa-circle-check"></i>Get Starting message</li>
+                            <li class="color-g"><i class="fa-regular fa-circle-check"></i>Min 1 month, extend anytime
+                            </li>
+                            <li class="color-g"><i class="fa-regular fa-circle-check"></i>Rental car prices include tax
+                            </li>
+                            <li class="color-g"><i class="fa-regular fa-circle-check"></i>Extend or return anytime</li>
+                            <li class="color-g "><i class="fa-regular fa-circle-check"></i>Doorstep delivery in 2days
+                            </li>
+                            <li class="color-g "><i class="fa-regular fa-circle-check"></i>Car system included free of
+                                charge.</li>
+                            <li class="color-g "><i class="fa-regular fa-circle-check"></i>Min 1 month, extend anytime
+                            </li>
+                        </ul>
+                        <button class="btn w-100 price-button">Request A Demo</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="pricing-section-bottom">
+            <div class="content-conteiner d-flex justify-content-between">
+                <div class="app-car-left">
+                    <div class="pricing-bottom-text">
+                        <h2 class="text-white">Dreamsrental User Friendly App Available</h2>
+                        <p class="text-white">Appropriately monetize one-to-one interfaces rather than cutting-edge
+                            Competently disinte rmediate backward.</p>
+                    </div>
+                    <div class="app-div d-flex">
+                        <img src="/img/play-store.svg">
+                        <img src="/img/apple.svg">
+                    </div>
+                </div>
+
+                <div class="app-car-div">
+            <img src="/img/app-car.png">
+                </div>
+            </div>
+        </section>
+  
