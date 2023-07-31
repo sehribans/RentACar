@@ -163,6 +163,7 @@
 </div>
 
 <script>
+       
     function gonder() {
         var dizi = new Array();
        
@@ -179,11 +180,11 @@
             data: { 'Filtreler':dizi},
             success(r){
                 console.log(r);
-                $('html').html(r);
+                $('#bodyHtml').html(r);
             }
         })
     }
-
+ 
 </script>
 
 

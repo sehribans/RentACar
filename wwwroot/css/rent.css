@@ -36,11 +36,19 @@
 .logo {
     width: 16%;
 }
-
-    .logo img {
-        width: 100%;
-    }
-
+.buttons a{
+    text-decoration:none;
+}
+.logo img {
+    width: 100%;
+}
+.logout-a {
+    width:5%;
+    margin-left:1rem;
+}
+.log-out {
+    width: 100%;
+}
 .button {
     background: none;
     color: #fff;

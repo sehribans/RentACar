@@ -13,6 +13,7 @@ namespace RentACar.Models
         public DbSet<TBL_ARAC> TBL_ARAC { get; set; }
         public DbSet<ILLER> ILLER { get; set; }
         public DbSet<RentView> RentView { get; set; }
+        public DbSet<TBL_KULLANICI> TBL_KULLANICI { get; set; }
         
     }
 

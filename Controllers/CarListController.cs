@@ -1,10 +1,11 @@
-﻿using Microsoft.AspNetCore.Components.Forms;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Components.Forms;
 using Microsoft.AspNetCore.Mvc;
 using RentACar.Models;
 
 namespace RentACar.Controllers
 {
-    
+    [Authorize]
     public class CarListController : Controller
     {
         DataContex _c;
@@ -16,6 +17,18 @@ namespace RentACar.Controllers
 
         public IActionResult Index(string[]? Filtreler)
         {
+
+            try
+            {
+
+                ViewBag.kullanici = User.FindFirst("KullaniciAdi").Value;
+            }
+            catch (Exception)
+            {
+                ViewBag.kullanici = null;
+
+            }
+
             ViewBag.datas = _c.TBL_MARKA.ToList();
             if (Filtreler.Length > 0)
             {

@@ -31,9 +31,17 @@
                     <li>Contact</li>
                 </ul>
             </div>
-            <div class="buttons">
-                <button class="button button-dark"><i class="fa-regular fa-user"></i> <span>Sign In</span></button>
-                <button class="button button-red"><i class="fa-solid fa-lock"></i><span>Sign Up</span></button>
+            <div class="buttons d-flex justify-content-end">
+                @if (ViewBag.kullanici != null)
+                {
+                    <h3>@ViewBag.kullanici</h3>
+                    <a class="logout-a" href="/Giris/LogOut"><img class="log-out" src="img/log-out.png"> </a>
+                }
+                else{
+                      <a href="Giris/" class="button button-dark"><i class="fa-regular fa-user"></i> <span>Sign In</span></a>
+                <a  href="Giris/Kayit" class="button button-red"><i class="fa-solid fa-lock"></i><span>Sign Up</span></a>
+                }
+              
             </div>
         </div>
     </header>
